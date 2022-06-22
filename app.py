@@ -94,6 +94,7 @@ def reset():
     try:
         cursor = db.cursor()
         cursor.execute("TRUNCATE TABLE record")
+        db.commit()
         return redirect(url_for("home"))
     except Exception as e : 
         return render_template("custom_error.html", error=e)
