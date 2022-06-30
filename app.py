@@ -18,6 +18,8 @@ db = pymysql.connect(
 
 # Routing
 
+# db = pymysql.connect(host='52.2.189.87',user='admin',password='vinayak123',database='TodoApp',charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
+
 #Handling error 404 and displaying relevant web page
 @app.errorhandler(404)
 def not_found_error(error):
